@@ -1,0 +1,41 @@
+#navbar
+{
+    padding: 20px;
+    font-size: 30px;
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    background-color: rgb(41, 41, 116);
+}
+#cards
+{
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: auto;
+    gap:20px;
+    justify-content: space-around;
+
+}
+#cards>div>p
+{
+    text-decoration:line-through;
+}
+#cards>div
+{
+    padding: 10px;
+}
+#cards>div>img
+{
+    width: 100%;
+    
+}
+div>a {
+    text-decoration: none;
+    color: white;
+
+}
+h1{
+    text-align: center;
+}

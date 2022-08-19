@@ -1,0 +1,76 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>counter</title>
+    <style>
+        #container
+        {
+            width: 90%;
+            margin: auto;
+            text-align: center;
+            justify-content: center;
+            padding: 30% 0px;
+            justify-content: space-around;
+            background-color: darksalmon;
+            /* display: flex; */
+        }
+        #increase,#decrease
+        {
+            margin-top: 30px;
+            padding: 20px;
+           color: white;
+           background-color: rgb(52, 140, 185);
+           /* border: 1mm solid red; */
+        }
+        #result
+        {
+            background-color: aliceblue;
+            color: black;
+            width: 20%;
+            margin: auto;
+            text-align: center;
+            border: 1mm solid black;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1 id="result"></h1>
+        <br>
+        <button id="increase">Increase</button>
+        <button id="decrease">Decrease</button>
+
+
+    </div>
+</body>
+</html>
+
+<script>
+var count=JSON.parse(localStorage.getItem("counter"))||0
+var result=document.querySelector("#result")
+result.innerText=count
+
+var increase=document.querySelector("#increase").addEventListener("click",function(){
+    count++
+    localStorage.setItem("counter",JSON.stringify(count))
+    result.innerText=localStorage.getItem("counter")
+})
+
+
+
+
+var decrease=document.querySelector("#decrease").addEventListener("click",function(){
+    count--
+    console.log(count)
+    localStorage.setItem("counter",JSON.stringify(count))
+    result.innerText=localStorage.getItem("counter")
+})
+
+
+</script>
